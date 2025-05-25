@@ -1,0 +1,30 @@
+# Interactive Story Generator Demo
+
+## What this demo shows
+
+This demo showcases a simple interactive storytelling experience. Users can provide an initial prompt, and the application will generate a starting point for a story. Then, users are presented with choices that influence the direction of the narrative, allowing them to collaboratively create a unique story.
+
+The core idea is to simulate how an AI model (like a large language model) could be used to generate creative text and adapt to user input in real-time to create an engaging and dynamic experience.
+
+## How to interact with the demo
+
+1.  **Enter a Prompt**: In the text input field labeled "Enter your initial prompt", type a sentence or a few keywords to start your story. For example, "A lonely robot in a futuristic city" or "An ancient map discovered in an old library."
+2.  **Generate Story**: Click the "Generate Story" button.
+3.  **Read the Story**: The initial part of your story will appear in the "Story" section.
+4.  **Make a Choice**: Below the story, you will see a list of choices. Click on the button corresponding to the choice you want to make to continue the story.
+5.  **Continue the Adventure**: The story will update based on your choice, and new choices will be presented. Continue making choices to unfold your unique narrative.
+6.  **Loading States**: The buttons will be disabled and a "Loading..." message may appear while the "AI" is "thinking" (simulating an API call).
+
+## Technical Implementation
+
+This demo is built using **React** and **TypeScript**.
+
+-   **`page.tsx`**: This file contains the main React component for the interactive story.
+    -   It uses React's `useState` hook to manage the state of the current prompt, the generated story, the available choices, and the loading status.
+    -   `handleSubmit`: This function is called when the user submits their initial prompt. It simulates an API call to a backend (in this case, using `setTimeout`) to generate the initial story segment and a set of choices.
+    -   `handleChoice`: This function is called when the user clicks on a choice. It also simulates an API call to generate the next part of the story based on the selected choice.
+    -   The component dynamically renders the story text and the choice buttons.
+-   **`style.css`**: This file provides basic CSS for styling the layout, text input, buttons, and display areas to make the demo more visually appealing and user-friendly.
+-   **No Actual AI**: For simplicity and to make this a front-end only demo, the story generation is simulated. In a real-world application, the `handleSubmit` and `handleChoice` functions would make actual HTTP requests to a backend server. This server would host an AI model (e.g., a GPT-like model) that processes the prompt/choice and generates the corresponding text.
+
+The focus of this demo is on the user interface and the interactive flow rather than the complexities of AI model integration.

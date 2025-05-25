@@ -11,6 +11,17 @@ interface DemoListProps {
 }
 
 export function DemoList({ demos, selectedDemo, onSelect, llmSelector }: DemoListProps) {
+  const allDemos = [
+    ...demos,
+    {
+      id: "interactive_story",
+      name: "Interactive Story",
+      description: "Engage in a dynamic narrative where your choices shape the unfolding story.",
+      href: "/feature/interactive_story",
+      tags: ["UI", "UX", "Storytelling"], // Added some example tags
+    },
+  ];
+
   return (
     <div className="h-full">
       <div className="px-4 pt-3 pb-2">
@@ -18,7 +29,7 @@ export function DemoList({ demos, selectedDemo, onSelect, llmSelector }: DemoLis
         {llmSelector && <div className="mt-2">{llmSelector}</div>}
       </div>
       <ul className="px-2 space-y-0.5">
-        {demos.map((demo) => (
+        {allDemos.map((demo) => (
           <li key={demo.id}>
             <button
               className={cn(
@@ -54,4 +65,4 @@ export function DemoList({ demos, selectedDemo, onSelect, llmSelector }: DemoLis
       </ul>
     </div>
   );
-} 
+}

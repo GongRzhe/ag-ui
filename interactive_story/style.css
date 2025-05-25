@@ -1,0 +1,89 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-area input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-area button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.story-display {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.story-display h2 {
+  margin-top: 0;
+  color: #555;
+}
+
+.choices-area {
+  margin-top: 20px;
+}
+
+.choices-area h2 {
+  color: #555;
+}
+
+.choices-area button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.choices-area button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.choices-area button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+p {
+  line-height: 1.6;
+  color: #444;
+}
